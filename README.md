@@ -29,7 +29,7 @@ Flutter Local Notifications: Sends notifications to inform the user about the do
 
 App Setup
 1. Clone the Repository
-git clone https://github.com/sajidpv/piscape.git
+git clone https://github.com/sajidpv/PicScape.git
 
 3. Install Dependencies
 Navigate to the project directory and run:
@@ -39,8 +39,6 @@ flutter pub get
 To get access to the Pexels API, you need to sign up on Pexels and generate your API key.
 
 5. Run the App
-Once everything is set up, you can run the app on your emulator or physical device:
-
-flutter run
+Once everything is set up, you can run the app on your emulator or physical device.
 
 
