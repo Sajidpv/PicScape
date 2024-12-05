@@ -1,8 +1,8 @@
-# Piscape - Wallpaper App
+# PicScape - Wallpaper App
 
 Get the APK from [Google Drive](https://drive.google.com/file/d/1Ofs5OH7pcioM5CDY5lEVj6U_bBSysqtc/view?usp=share_link)
 
-Piscape is a Flutter-based app that lets users discover and download beautiful, high-resolution wallpapers. It fetches images from the Pexels API, allows image searching and browsing by categories, and supports lazy loading with a Pinterest-like image listing. Additionally, users can download high-resolution images directly to their devices.
+PicScape is a Flutter-based app that lets users discover and download beautiful, high-resolution wallpapers. It fetches images from the Pexels API, allows image searching and browsing by categories, and supports lazy loading with a Pinterest-like image listing. Additionally, users can download high-resolution images directly to their devices.
 
 Features
 
