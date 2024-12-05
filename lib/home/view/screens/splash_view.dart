@@ -25,7 +25,7 @@ class SplashView extends StatelessWidget {
           ),
           Positioned.fill(
               top: context.mediaQueryHeight / 3,
-              child: HeaderRowWidget(
+              child: const HeaderRowWidget(
                 isIcon: false,
               )),
           Positioned(

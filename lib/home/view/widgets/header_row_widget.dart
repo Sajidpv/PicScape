@@ -22,7 +22,7 @@ class HeaderRowWidget extends StatelessWidget {
               )),
         if (isIcon) 10.width,
         RichText(
-            text: TextSpan(children: [
+            text: const TextSpan(children: [
           TextSpan(
             text: 'Pic',
             style: TextStyle(

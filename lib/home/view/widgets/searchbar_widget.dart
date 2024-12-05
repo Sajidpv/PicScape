@@ -8,7 +8,7 @@ class SearchbarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+      margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
       decoration: BoxDecoration(
         color: Colors.grey[100],
         borderRadius: BorderRadius.circular(8.0),
@@ -20,7 +20,7 @@ class SearchbarWidget extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 8.0),
               child: TextField(
                 controller: context.homeProvider.searchImage,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   hintText: 'Search images (nature, animals)...',
                   border: InputBorder.none,
                 ),
@@ -28,7 +28,7 @@ class SearchbarWidget extends StatelessWidget {
             ),
           ),
           IconButton(
-              icon: Icon(Icons.search),
+              icon: const Icon(Icons.search),
               color: AppPellet.primaryColor,
               iconSize: 30,
               onPressed: context.homeProvider.searchImages),

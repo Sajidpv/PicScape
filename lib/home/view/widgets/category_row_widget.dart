@@ -8,7 +8,7 @@ class CategoryRowWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final categories = context.homeProvider.categories;
-    return Container(
+    return SizedBox(
       height: 50,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
@@ -18,7 +18,7 @@ class CategoryRowWidget extends StatelessWidget {
           return GestureDetector(
             onTap: () => context.homeProvider.setNewCategory(index),
             child: Container(
-              margin: EdgeInsets.symmetric(horizontal: 8.0),
+              margin: const EdgeInsets.symmetric(horizontal: 8.0),
               width: 150,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(8.0),
@@ -30,7 +30,7 @@ class CategoryRowWidget extends StatelessWidget {
               child: Center(
                 child: Text(
                   categories[index],
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: AppPellet.whiteBackground,
                     fontSize: 20.0,
                     fontWeight: FontWeight.bold,

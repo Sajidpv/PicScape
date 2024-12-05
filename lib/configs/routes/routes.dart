@@ -19,7 +19,7 @@ class Routes {
         return MaterialPageRoute(builder: (_) {
           return const Scaffold(
             body: Center(
-              child: Text(RoutesName.no_route),
+              child: Text(RoutesName.noroute),
             ),
           );
         });

@@ -1,6 +1,5 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:picscape/configs/utils/utils.dart';
 import 'package:picscape/data/response/api_responses.dart';
 import 'package:picscape/data/response/status.dart';
 import 'package:picscape/home/model/image_model.dart';
@@ -14,11 +13,11 @@ class HomeProvider with ChangeNotifier {
     fetchImages(selectedCategory);
   }
   final List<String> categories = [
+    'Food',
     'Architecture',
     'Movie',
     'Travel',
     'Animal',
-    'Food',
     'Sport',
     'Nature',
   ];
@@ -88,31 +87,6 @@ class HomeProvider with ChangeNotifier {
       _isFetching = false;
     });
   }
-
-  // Future<void> fetchImages(String search) async {
-  //   if (_isFetching || !_hasMore) return;
-
-  //   _isFetching = true;
-  //   notifyListeners();
-
-  //   homeRepository.fetchImagesApi(search, _currentPage).then((value) {
-  //     if (value.results!.isEmpty) {
-  //       _hasMore = false;
-  //     } else {
-  //       _images!.addAll(value.results!.toList());
-  //       _currentPage++;
-  //     }
-  //     _isFetching = false;
-  //     notifyListeners();
-  //   }).onError((error, stackTrace) {
-  //     _isFetching = false;
-  //     if (kDebugMode) {
-  //       print(error);
-  //       print(stackTrace);
-  //     }
-  //     notifyListeners();
-  //   });
-  // }
 
   @override
   void dispose() {

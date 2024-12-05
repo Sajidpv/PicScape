@@ -98,7 +98,7 @@ class Results {
     likedByUser = json['liked_by_user'];
     currentUserCollections =
         List<String>.from(json['current_user_collections'] ?? []); // Fixed type
-    sponsorship = json['sponsorship'];
+    sponsorship = json['sponsorship'] is String ? json['sponsorship'] : null;
     topicSubmissions = json['topic_submissions'] != null
         ? TopicSubmissions.fromJson(json['topic_submissions'])
         : null;
@@ -386,7 +386,7 @@ class User {
     followedByUser = json['followed_by_user'];
     isFollowedByUser = json['is_followed_by_user'];
     profileImage = json['profile_image'] != null
-        ? new ProfileImage.fromJson(json['profile_image'])
+        ? ProfileImage.fromJson(json['profile_image'])
         : null;
     socialMedia = json['social_media'];
   }
@@ -408,8 +408,8 @@ class User {
     data['total_collections'] = totalCollections;
     data['followed_by_user'] = followedByUser;
     data['is_followed_by_user'] = isFollowedByUser;
-    if (this.profileImage != null) {
-      data['profile_image'] = this.profileImage!.toJson();
+    if (profileImage != null) {
+      data['profile_image'] = profileImage!.toJson();
     }
     data['social_media'] = socialMedia;
     return data;
@@ -430,10 +430,10 @@ class ProfileImage {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['small'] = this.small;
-    data['medium'] = this.medium;
-    data['large'] = this.large;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['small'] = small;
+    data['medium'] = medium;
+    data['large'] = large;
     return data;
   }
 }
@@ -458,11 +458,11 @@ class Social {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['instagram_username'] = this.instagramUsername;
-    data['portfolio_url'] = this.portfolioUrl;
-    data['twitter_username'] = this.twitterUsername;
-    data['paypal_email'] = this.paypalEmail;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['instagram_username'] = instagramUsername;
+    data['portfolio_url'] = portfolioUrl;
+    data['twitter_username'] = twitterUsername;
+    data['paypal_email'] = paypalEmail;
     return data;
   }
 }

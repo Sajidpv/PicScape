@@ -5,6 +5,7 @@ import 'package:picscape/configs/app_themes/colors.dart';
 import 'package:picscape/configs/components/default_lost_widget.dart';
 import 'package:picscape/configs/components/empty_data_screen_widget.dart';
 import 'package:picscape/configs/utils/extensions.dart';
+import 'package:picscape/configs/utils/utils.dart';
 import 'package:picscape/data/response/status.dart';
 import 'package:picscape/home/view/components/product_shimmer.dart';
 import 'package:picscape/home/view/components/product_staggered_shimmer.dart';
@@ -33,17 +34,17 @@ class _ImageGridWidgetState extends State<ImageGridWidget> {
         _scrollController.position.maxScrollExtent - 200) {
       Provider.of<HomeProvider>(context, listen: false)
           .fetchImages(context.homeProvider.selectedCategory);
-      // .fetchImagesFromUnsplash(context.homeProvider.selectedCategory);
     }
   }
 
+  final Utils _utils = Utils();
   @override
   Widget build(BuildContext context) {
     return Consumer<HomeProvider>(
       builder: (context, provider, child) {
         switch (provider.unsplashedImageList.status) {
           case Status.loading:
-            return ProductStaggeredShimmer();
+            return const ProductStaggeredShimmer();
           case Status.error:
             return HomeErrorWidget(
               list: provider.unsplashedImageList.message,
@@ -54,9 +55,11 @@ class _ImageGridWidgetState extends State<ImageGridWidget> {
           case Status.completed:
             if (provider.unsplashImages == null ||
                 provider.unsplashImages!.isEmpty) {
-              return NoDataScreenWidget(
-                onRefresh: () =>
-                    provider.fetchImages(provider.selectedCategory),
+              return Center(
+                child: NoDataScreenWidget(
+                  onRefresh: () =>
+                      provider.fetchImages(provider.selectedCategory),
+                ),
               );
             }
             return Column(
@@ -72,6 +75,8 @@ class _ImageGridWidgetState extends State<ImageGridWidget> {
                     itemBuilder: (context, index) {
                       final photo = provider.unsplashImages?[index];
                       return GestureDetector(
+                        onTap: () => _utils.downloadImage(
+                            photo?.urls?.full ?? '', context),
                         child: Padding(
                           padding: const EdgeInsets.all(5.0),
                           child: ClipRRect(
@@ -90,7 +95,7 @@ class _ImageGridWidgetState extends State<ImageGridWidget> {
                                     top: 10,
                                     left: 10,
                                     child: Container(
-                                      padding: EdgeInsets.all(3),
+                                      padding: const EdgeInsets.all(3),
                                       width: 40,
                                       decoration: BoxDecoration(
                                           borderRadius:
@@ -117,7 +122,7 @@ class _ImageGridWidgetState extends State<ImageGridWidget> {
               ],
             );
           default:
-            return LostPage();
+            return const LostPage();
         }
       },
     );

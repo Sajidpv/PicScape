@@ -1,10 +1,6 @@
 // ignore_for_file: non_constant_identifier_names, constant_identifier_names
 
-import 'app_strings.dart';
-
 class AppConfig {
-  static String app_name = AppStrings.appTitle;
-
   static const bool HTTPS = true;
 
   static const DOMAIN_PATH = "api.unsplash.com/";
@@ -19,9 +15,4 @@ class AppConfig {
   static const String RAW_BASE_URL = "$PROTOCOL$DOMAIN_PATH";
   static const String BASE_URL =
       "$RAW_BASE_URL$API_ENDPATH?client_id=$UNSPLASH_ACCESS_KEY";
-
-  @override
-  String toString() {
-    return super.toString();
-  }
 }

@@ -18,7 +18,7 @@ class ProductStaggeredShimmer extends StatelessWidget {
             padding: const EdgeInsets.all(5.0),
             child: ClipRRect(
                 borderRadius: BorderRadius.circular(30),
-                child: ProductShimmer()),
+                child: const ProductShimmer()),
           ),
         );
       },

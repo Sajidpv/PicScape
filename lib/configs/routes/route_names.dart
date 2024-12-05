@@ -4,5 +4,5 @@ class RoutesName {
   //home screen routes name
   static const String home = 'home_screen';
 
-  static const String no_route = 'No route defined';
+  static const String noroute = 'No route defined';
 }
