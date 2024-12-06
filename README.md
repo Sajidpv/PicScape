@@ -19,7 +19,7 @@ Features
 
 Technologies & Packages Used
 
-  > **Provider**: Manages state for lazy loading and image fetching.
+  1. **Provider**: Manages state for lazy loading and image fetching.
   > **Cached Network Image**: Efficiently caches and loads images from the internet.
   > **Path Provider**: Locates the correct directory to store downloaded images on the device.
   > **Dio**: Manages HTTP requests to download images.
