@@ -4,6 +4,7 @@ Get the APK from [Google Drive](https://drive.google.com/file/d/1Ofs5OH7pcioM5CD
 
 PicScape is a Flutter-based app that lets users discover and download beautiful, high-resolution wallpapers. It fetches images from the Pexels API, allows image searching and browsing by categories, and supports lazy loading with a Pinterest-like image listing. Additionally, users can download high-resolution images directly to their devices.
 
+
 Features
 
 Home Screen: Displays a list of popular photos fetched from the Pexels API.
@@ -19,6 +20,8 @@ Categories: Users can filter images based on categories.
 Image Download: Tap on an image to download the high-resolution version to the device.
 
 Local Notifications: Displays a notification when the download is in progress and when it is completed.
+
+
 
 Technologies & Packages Used
 
@@ -41,6 +44,7 @@ Flushbar: Displays snackbars for messages, such as error or success notification
 Flutter Staggered Grid View: Used to create a Pinterest-style grid layout for images.
 
 Flutter Local Notifications: Sends notifications to inform the user about the download progress.
+
 
 App Setup
 1. Clone the Repository
