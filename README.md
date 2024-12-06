@@ -23,8 +23,8 @@ Technologies & Packages Used
   2. **Cached Network Image**: Efficiently caches and loads images from the internet.
   3. **Path Provider**: Locates the correct directory to store downloaded images on the device.
   4. **Dio**: Manages HTTP requests to download images.
-  5.** Permission Handler**: Requests necessary permissions to write files to the device.
-  6.** Get It**: A simple service locator for dependency management.
+  5. ** Permission Handler**: Requests necessary permissions to write files to the device.
+  6. **Get It**: A simple service locator for dependency management.
   7. **Shimmer**: Adds a loading effect for images while they are being fetched.
   8. **Flushbar**: Displays snackbars for messages, such as error or success notifications.
   9. **Flutter Staggered Grid View**: Used to create a Pinterest-style grid layout for images.
