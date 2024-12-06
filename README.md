@@ -7,28 +7,28 @@ PicScape is a Flutter-based app that lets users discover and download beautiful,
 
 Features
 
-  > **Home Screen**: Displays a list of popular photos fetched from the Pexels API.
-  > **Lazy Loading**: Images are loaded dynamically as the user scrolls (inspired by Pinterest’s image grid style).
-  >** Image Download**: Users can tap on any image to download directly to their device.
-  > **Search**: Allows users to search for images based on keywords.
-  > **Categories**: Users can filter images based on categories.
-  > **Image Download**: Tap on an image to download the high-resolution version to the device.
-  > **Local Notifications**: Displays a notification when the download is in progress and when it is completed.
+  1. **Home Screen**: Displays a list of popular photos fetched from the Pexels API.
+  2. **Lazy Loading**: Images are loaded dynamically as the user scrolls (inspired by Pinterest’s image grid style).
+  3.** Image Download**: Users can tap on any image to download directly to their device.
+  4. **Search**: Allows users to search for images based on keywords.
+  5. **Categories**: Users can filter images based on categories.
+  6. **Image Download**: Tap on an image to download the high-resolution version to the device.
+  7. **Local Notifications**: Displays a notification when the download is in progress and when it is completed.
 
 
 
 Technologies & Packages Used
 
   1. **Provider**: Manages state for lazy loading and image fetching.
-  > **Cached Network Image**: Efficiently caches and loads images from the internet.
-  > **Path Provider**: Locates the correct directory to store downloaded images on the device.
-  > **Dio**: Manages HTTP requests to download images.
-  >** Permission Handler**: Requests necessary permissions to write files to the device.
-  >** Get It**: A simple service locator for dependency management.
-  > **Shimmer**: Adds a loading effect for images while they are being fetched.
-  > **Flushbar**: Displays snackbars for messages, such as error or success notifications.
-  > **Flutter Staggered Grid View**: Used to create a Pinterest-style grid layout for images.
-  > **Flutter Local Notifications**: Sends notifications to inform the user about the download progress.
+  2. **Cached Network Image**: Efficiently caches and loads images from the internet.
+  3. **Path Provider**: Locates the correct directory to store downloaded images on the device.
+  4. **Dio**: Manages HTTP requests to download images.
+  5.** Permission Handler**: Requests necessary permissions to write files to the device.
+  6.** Get It**: A simple service locator for dependency management.
+  7. **Shimmer**: Adds a loading effect for images while they are being fetched.
+  8. **Flushbar**: Displays snackbars for messages, such as error or success notifications.
+  9. **Flutter Staggered Grid View**: Used to create a Pinterest-style grid layout for images.
+  10.**Flutter Local Notifications**: Sends notifications to inform the user about the download progress.
 
 
 **App Setup**
